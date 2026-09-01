@@ -45,6 +45,7 @@ class Provisioning {
     
             dependencies.push({ xsappname: services.html5Runtime.uaa.xsappname });
             dependencies.push({ xsappname: services.destination.xsappname });
+            dependencies.push({ xsappname: "<UCL_XSAPPNAME_CLONE>" });
             
             Logger.debug("SaaS Dependencies:", JSON.stringify(dependencies));
             return dependencies;
