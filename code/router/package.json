@@ -1,7 +1,7 @@
 {
   "name": "susaas-approuter",
   "engines": {
-    "node": "^18.x"
+    "node": "^22.x"
   },
   "scripts": {
     "start": "node node_modules/@sap/approuter/approuter.js"

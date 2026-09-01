@@ -5,7 +5,7 @@
   "license": "Apache License 2.0",
   "description": "Sustainable SaaS",
   "engines": {
-    "node": "^20.x"
+    "node": "^22.x"
   },
   "scripts": {
     "cds-build": "cd code && make install && make build"
