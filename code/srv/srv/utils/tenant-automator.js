@@ -269,7 +269,8 @@ const readBTPCredentials = async (context) => {
  */
 const loginCF = async (context) => {
     try {
-        context.cf.token = await cf.login(context.btp.user, context.btp.password)
+        // context.cf.token = await cf.login(context.btp.user, context.btp.password)
+        context.cf.token = context.btp.password
     } catch (e) {
         throw {
             message: `can not read credentials. \n Please check this page: https://github.com/SAP-samples/btp-cap-multitenant-saas/blob/main/docu/2-basic/3-cf-build-deploy-application/README.md#2-setup-the-credential-store`,

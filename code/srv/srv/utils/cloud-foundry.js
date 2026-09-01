@@ -90,7 +90,7 @@ async function getAppDomainInfo(appname) {
 
 async function createRoute(tenantHost, appname, token) {
     try {
-        const appDomainInfo = await getAppDomainInfo(appname);
+        const appDomainInfo = await getAppDomainInfo(appname, token);
 
         // Create the route
         const routeResponse = await fetch(`${appEnv.app.cf_api}/v3/routes`, {
@@ -140,7 +140,7 @@ async function createRoute(tenantHost, appname, token) {
 
 async function deleteRoute(tenantHost, appname, token) {
     try {
-        const appDomainInfo = await getAppDomainInfo(appname);
+        const appDomainInfo = await getAppDomainInfo(appname, token);
         const route = await getAppRoute(appDomainInfo.app_id, tenantHost);
         if(!route) return
 
